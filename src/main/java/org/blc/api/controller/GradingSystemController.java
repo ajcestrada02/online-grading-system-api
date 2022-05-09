@@ -21,6 +21,7 @@ public class GradingSystemController {
 	@Autowired
 	private GradingSystemService gradingSystemService;
 	
+	@CrossOrigin(origins = "http://localhost:3000")
 	@GetMapping("/load-student-grade-details")
 	@PreAuthorize("permitAll()")
 	public ResponseEntity<List<StudentGrade>> loadStudentGradeDetails(@RequestParam Long studentId){
