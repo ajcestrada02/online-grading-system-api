@@ -27,15 +27,19 @@ public class StudentGrade extends BaseModel {
 	private Integer numberOfItems;
 	
 	private Double score;
+	
+	private Date dateOfActivity;
+
 
 	public StudentGrade(Long id, Date createdDate, Date updatedDate, Category category, StudentDetails studentDetails,
-			String description, Integer numberOfItems, Double score) {
+			String description, Integer numberOfItems, Double score, Date dateOfActivity) {
 		super(id, createdDate, updatedDate);
 		this.category = category;
 		this.studentDetails = studentDetails;
 		this.description = description;
 		this.numberOfItems = numberOfItems;
 		this.score = score;
+		this.dateOfActivity = dateOfActivity;
 	}
 
 	public StudentGrade() {
@@ -80,4 +84,13 @@ public class StudentGrade extends BaseModel {
 	public void setScore(Double score) {
 		this.score = score;
 	}
+
+	public Date getDateOfActivity() {
+		return dateOfActivity;
+	}
+
+	public void setDateOfActivity(Date dateOfActivity) {
+		this.dateOfActivity = dateOfActivity;
+	}
+	
 }
